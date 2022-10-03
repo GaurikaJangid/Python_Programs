@@ -1,0 +1,51 @@
+# method-1 (by making a string)
+
+n = int(input())
+string = str(n)
+l = len(string)
+sum = 0
+for i in range(l):
+    sum = sum + int(string[i])
+    i = i+1
+print(sum)
+
+
+
+
+
+# method-2 (by while loop)
+
+n = int(input())
+sum = 0
+while n>0:
+    sum = sum + n%10  # sum will starts from the last digit of the number
+    n = n//10     # new number that is left 
+print(sum)
+
+
+
+
+
+# method-3 (by sum() in-built function)
+
+n = int(input())
+string = str(n)
+digit = string
+res = sum(int(digit) for digit in string)
+print(res)
+
+
+
+
+# method-4
+
+n = int(input())
+string = str(n)
+res = sum(map(int, string))
+print(res)
+
+
+
+
+
+
